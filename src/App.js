@@ -19,11 +19,10 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<AuthForm usage="Login"/>} />
         <Route path="/signup" element={<AuthForm usage="Signup"/>} />
-        <Route path="/category/:id" element={<Devices/>} />
+        <Route path="/category/:id" element={<h2>Devices</h2>} />
         <Route path="/device/:id" element={<h2>Details</h2>} />
         <Route path="/*" element={<h2>404 page not found</h2>} />
     </Routes>
-    <h2>Footer</h2>
     </Router>
   );
 }
