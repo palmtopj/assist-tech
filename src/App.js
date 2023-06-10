@@ -9,8 +9,10 @@ function App() {
   // add stAtes here
   return (
     <Router>
-      <div className="Navbar"> 
-        <h1>Navbar</h1>
+      {/* <div className="Navbar">  */}
+      <div className="App"> 
+        <Navbar />
+        <h1>Assistive Technologies</h1>
       </div>
       <hr />
       <Routes>
