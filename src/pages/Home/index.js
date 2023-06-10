@@ -19,7 +19,6 @@ export default function Home() {
                 <button className="large-button">Hearing</button>
                 <button className="large-button">Portable</button>
                 <button className="large-button">Other</button>
-                <button className="large-button">TBD</button>
                 </div>
 
         </main>
