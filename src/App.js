@@ -23,7 +23,6 @@ function App() {
         <Route path="/device/:id" element={<h2>Details</h2>} />
         <Route path="/*" element={<h2>404 page not found</h2>} />
     </Routes>
-    <h2>Footer</h2>
     </Router>
   );
 }
