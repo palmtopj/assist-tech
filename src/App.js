@@ -3,12 +3,15 @@ import Home from "./pages/Home";
 // import Login from "./pages/AuthForm"
 import "./app.css";
 import AuthForm from "./pages/AuthForm";
+import Navbar from "./components/Navbar";
 
 function App() {
   // add stAtes here
   return (
     <Router>
-      <h1>Navbar</h1>
+      <div className="Navbar"> 
+        <h1>Navbar</h1>
+      </div>
       <hr />
       <Routes>
         <Route path="/" element={<Home/>} />
