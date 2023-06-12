@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
+// import React { useState } from 'react'76
+import React from 'react'
+import "./style.css"
 
-const ListPage = () => {
-  const [title, setTitle] = useState('');
-  const [items, setItems] = useState([]);
+const DevicesPage = () => {
+    const [title, setTitle] = React.useState("");
+    const [devices, setDevices] = React.useState([]);
 
-  const handleButtonClick = (title) => {
-    setTitle(title);
-    // Here you can fetch the list of items from an API or any other data source based on the selected title
-    // and update the 'items' state accordingly.
-    // For simplicity, we'll just use some hardcoded data here:
-    const itemList = ['Item 1', 'Item 2', 'Item 3'];
-    setItems(itemList);
-  };
+    const handleButtonClick = (title) => {
+        setTitle(title);
+        setDevices(devices);
+        // temp devices
+        const devicesList = ['Item 1', 'Item 2', 'Item 3'];
+        setDevices(devicesList);
+    };
 
-  return (
-    <div>
-      <h1>{title}</h1>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <button onClick={() => handleButtonClick('Title 1')}>Title 1</button>
-      <button onClick={() => handleButtonClick('Title 2')}>Title 2</button>
-      <button onClick={() => handleButtonClick('Title 3')}>Title 3</button>
-    </div>
-  );
+    return (
+        <div>
+            <h1>{title}</h1>
+            <ul>
+                {devices.map((device, index) => (
+                    <li key={index}>{device}</li>
+                ))}
+            </ul>
+            <button onClick={() => handleButtonClick('Title 1')}>Title 1</button>
+            <button onClick={() => handleButtonClick('Title 2')}>Title 2</button>
+            <button onClick={() => handleButtonClick('Title 3')}>Title 3</button>
+        </div>
+    );
 };
 
-export default ListPage;
+export default DevicesPage;
