@@ -8,6 +8,9 @@ import Navbar from "./components/Navbar";
 
 function App() {
   // add stAtes here
+  // const [userId, setUserId] = useState(-1);
+  // const [username, setUsername] = useState("")
+  // const [token, setToken] = useState("")
   return (
     <Router>
       <div className="App"> 
@@ -17,7 +20,7 @@ function App() {
       <hr />
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/login" element={<AuthForm usage="Login"/>} />
+        <Route path="/login" element={<AuthForm usage="Login" />} />
         <Route path="/signup" element={<AuthForm usage="Signup"/>} />
         <Route path="/category/:id" element={<Devices/>} />
         <Route path="/device/:id" element={<h2>Details</h2>} />
@@ -28,3 +31,4 @@ function App() {
 }
 
 export default App;
+// setUserId={setUserId} setUsername={setUsername} setToken={setToken} userId={userId} username={username}
