@@ -5,14 +5,15 @@ import API from '../../utils/API';
 
 
 export default function AuthForm(props) {
+    // console.log(props,"props?")
     const navigate = useNavigate();
     const [username, setusername] = useState("");
     const [password, setpassword] = useState("");
     useEffect(() => {
         if (props.user_id > 0) {
-          navigate(`/user/${props.username}`);
+          navigate(`/ `);
         }
-      }, [props.user_id]);
+      },);
     const handleChange = e=>{
         if(e.target.name==="username"){
         setusername(e.target.value)
@@ -28,7 +29,8 @@ export default function AuthForm(props) {
                 password: password,
             }).then(data=>{
                 console.log(data)
-                props.setUserId(data.user.id);
+                navigate("/");
+                props.setUserId(data.user._id);
                 props.setUsername(data.user.username);
                 props.setToken(data.token);
                 localStorage.setItem("token", data.token);      
@@ -42,6 +44,7 @@ export default function AuthForm(props) {
             })
               .then((data) => {
                 console.log(data);
+                navigate("/");
                 props.setUserId(data.user.id);
                 props.setUsername(data.user.username);
               })
