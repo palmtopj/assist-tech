@@ -5,12 +5,11 @@ import "./style.css"
 export default function Home() {
     return (
         <main className="Home">
-            <h1>Assistive Technologies less than 250</h1>
-            <h2>Please tap a category below</h2>
+            <h2>Please choose a category below</h2>
             <div className="button-container">
                <div className="button-row">
-                <button className="large-button">Keyboards / Mice</button>
-                <button className="large-button">Quest 2 VR</button>
+                <button className="large-button">Keyboards</button>
+                <button className="large-button">Mice</button>
                 <button className="large-button">Switches</button>
                 <button className="large-button">Braille</button>
                 </div>
