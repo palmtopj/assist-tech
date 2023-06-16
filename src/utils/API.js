@@ -30,5 +30,14 @@ const API = {
       throw new Error("falied signup");
     }
   },
+  // logout: async () => {
+  //   fetch(`${URL_PREFIX}/api/user`)
+  // }
+  // logoutBtn.addEventListener("click", async () => {
+  //   const response = await fetch("/api/Retailers/logout", {
+  //     method: "DELETE",
+  //   })
+  //   console.log(response)
+  // })
 };
 export default API;

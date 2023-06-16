@@ -30,10 +30,10 @@ export default function AuthForm(props) {
             }).then(data=>{
                 console.log(data)
                 navigate("/");
-                props.setUserId(data.user._id);
-                props.setUsername(data.user.username);
-                props.setToken(data.token);
-                localStorage.setItem("token", data.token);      
+                localStorage.setItem("username",data.username);
+                props.setUserId(data._id);
+                props.setUsername(data.username);
+                // props.setToken(data.token);
             }).catch(err=>{
                 console.log(err);
             })
@@ -44,14 +44,15 @@ export default function AuthForm(props) {
             })
               .then((data) => {
                 console.log(data);
-                navigate("/");
+                navigate("/login");
+                localStorage.setItem(data);      
                 props.setUserId(data.user.id);
                 props.setUsername(data.user.username);
-              })
-              .catch((err) => {
+            })
+            .catch((err) => {
                 console.log(err);
-              });
-          }
+            });
+        }
     }
     return (
         <main className="Login">
