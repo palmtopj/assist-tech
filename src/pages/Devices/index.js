@@ -1,10 +1,12 @@
 import React from 'react'
 import "./style.css"
+import {useLocation} from 'react-router-dom';
 
-const DevicesPage = () => {
+const DevicesPage = () => {fetch(`/api/${location.state.category}`)
     const [title, setTitle] = React.useState("");
     const [devices, setDevices] = React.useState([]);
-
+    const location = useLocation();
+console.log(location.state.category)
     const handleButtonClick = (title) => {
         setTitle(title);
         setDevices(devices);
