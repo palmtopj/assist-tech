@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css"
 
-export default function Home() {
+export default function Details() {
     return (
         <main className="Home">
             <h1>Assistive Technologies less than 250</h1>
