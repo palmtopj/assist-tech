@@ -1,12 +1,24 @@
 import React from 'react'
 import "./style.css"
-import {useLocation} from 'react-router-dom';
+import {useLocation, useParams} from 'react-router-dom';
 
-const DevicesPage = () => {fetch(`/api/${location.state.category}`)
+const DevicesPage = (props) => {
+    const location = useLocation();
+    const params = useParams();
+    const [tools, setTools] = React.useState([]);
     const [title, setTitle] = React.useState("");
     const [devices, setDevices] = React.useState([]);
-    const location = useLocation();
-console.log(location.state.category)
+    console.log(params);
+    console.log(props);
+
+    React.useEffect(()=>{
+    fetch(`/api/category/${params.id}`)
+     .then (res=>res.json())
+ .then (data=>setTools(data.tool))
+},[params.id])
+   // console.log(location.state.category)
+    
+//console.log(location.state.category)
     const handleButtonClick = (title) => {
         setTitle(title);
         setDevices(devices);
@@ -19,8 +31,11 @@ console.log(location.state.category)
         <div>
             <h1>{title}</h1>
             <ul>
-                {devices.map((device, index) => (
+                {/* {devices.map((device, index) => (
                     <li key={index}>{device}</li>
+                ))} */}
+                 {tools && tools.map((tool, index) => (
+                    <li key={index}>{tool.toolName}</li>
                 ))}
             </ul>
             <button onClick={() => handleButtonClick('Title 1')}>Title 1</button>

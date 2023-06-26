@@ -5,6 +5,7 @@ import Devices from "./pages/Devices";
 import "./app.css";
 import AuthForm from "./pages/AuthForm";
 import Navbar from "./components/Navbar";
+import Details from "./pages/Details";
 // import API from './utils/API';
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
           }
         />
         <Route path="/category" element={<Devices />} />
+        <Route path="/category/:id" element={<Devices />} />
         <Route path="/device/:id" element={<h2>Details</h2>} />
         <Route path="/*" element={<h2>404 page not found</h2>} />
       </Routes>
