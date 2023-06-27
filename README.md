@@ -1,3 +1,18 @@
+# Assit-Tech // Assistive Computing Technology for All
+
+![screenshot](.src/images/screenshot.png)
+https://github.com/palmtopj/assist-tech.git 
+https://github.com/roberto189/backend.git
+
+Other:
+https://backendtech4all.herokuapp.com/api/tool
+
+## Description
+Blog dedicated to raising awareness of computer-related hardware for disabled people.
+
+## Contributions
+Jason Johnson did the front end and Roberto Vargas did the back end.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

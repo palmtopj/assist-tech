@@ -1,6 +1,21 @@
+# Assit-Tech
+https://github.com/palmtopj/assist-tech.git
+https://github.com/roberto189/backend 
+![screenshot](./
+https://backendtech4all.herokuapp.com/api/tool 
+
+
+## Description
+Blog dedicated to raising awareness of computer-related hardware for disabled people.
+
+## Contributions
+Jason Johnson did the front end and Roberto Vargas did the back end.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+!!! PLEASE RUN NPM START FROM BOTH THIS DIRECTORY AND THE BACKEND DIRECTORY TO RUN THE APP !!!
 
 ## Available Scripts
 
